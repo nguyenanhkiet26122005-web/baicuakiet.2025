@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - Goăn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>Goăn</h1></a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Trang chủ</a>
+                    <a href="index.html#menu" class="nav-link">Thực đơn</a>
+                    <a href="cart.html" class="nav-link cart-link">
+                        Giỏ hàng
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <div id="userInfo" class="user-info" style="display: none;">
+                        <span class="user-greeting" id="userGreeting"></span>
+                        <button class="logout-btn" id="logoutBtn">Đăng xuất</button>
+                    </div>
+                    <a href="login.html" class="nav-link login-btn" id="loginLink">Đăng nhập</a>
+                </nav>
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn..." autocomplete="off">
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
+                    <button id="searchBtn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     Checkout Section 
+    <section class="checkout-section">
+        <div class="container">
+            <h2 class="section-title">Thanh Toán</h2>
+            
+            <div class="checkout-content">
+                <div class="checkout-form-container">
+                    <form id="checkoutForm" class="checkout-form">
+                        <h3>Thông tin người nhận</h3>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên *</label>
+                            <input type="text" id="fullName" required placeholder="Nhập họ và tên">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại *</label>
+                            <input type="tel" id="phone" required placeholder="Nhập số điện thoại">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Địa chỉ giao hàng *</label>
+                            <textarea id="address" required placeholder="Nhập địa chỉ chi tiết" rows="3"></textarea>
+                        </div>
+                        
+                        <h3>Phương thức thanh toán</h3>
+                        
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cash" checked>
+                                <span>💵 Thanh toán khi nhận hàng</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="transfer">
+                                <span>🏦 Chuyển khoản ngân hàng</span>
+                            </label>
+                        </div>
+                        
+                        <h3>Mã giảm giá</h3>
+                        
+                        <div class="voucher-section">
+                            <input type="text" id="voucherCode" placeholder="Nhập mã giảm giá">
+                            <button type="button" id="applyVoucher" class="apply-voucher-btn">Áp dụng</button>
+                        </div>
+                        <p id="voucherMessage" class="voucher-message"></p>
+                        
+                        <button type="submit" class="checkout-submit-btn">Hoàn tất thanh toán</button>
+                    </form>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Đơn hàng của bạn</h3>
+                    <div id="orderItems" class="order-items">
+                         Order items will be loaded by JavaScript 
+                    </div>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="checkoutSubtotal">0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span id="checkoutShipping">30.000đ</span>
+                    </div>
+                    <div class="summary-row discount" id="discountRow" style="display: none;">
+                        <span>Giảm giá:</span>
+                        <span id="discountAmount">0đ</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng:</span>
+                        <span id="checkoutTotal">0đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Success Popup 
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-icon">✓</div>
+            <h3>Đặt hàng thành công!</h3>
+            <p>Cảm ơn bạn đã mua hàng tại Goăn!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

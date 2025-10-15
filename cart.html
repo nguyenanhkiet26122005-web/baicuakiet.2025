@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Goăn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html"><h1>Goăn</h1></a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="index.html#menu" class="nav-link">Thực đơn</a>
+        <a href="index.html#promotions" class="nav-link">Khuyến mãi</a>
+        <a href="cart.html" class="nav-link cart-link">
+          Giỏ hàng
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <div id="userInfo" class="user-info" style="display: none;">
+          <span class="user-greeting" id="userGreeting"></span>
+          <button class="logout-btn" id="logoutBtn">Đăng xuất</button>
+        </div>
+        <a href="login.html" class="nav-link login-btn" id="loginLink">Đăng nhập</a>
+      </nav>
+      <div class="search-box">
+        <div class="search-input-wrapper">
+          <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn..." autocomplete="off">
+          <div class="search-suggestions" id="searchSuggestions"></div>
+        </div>
+        <button id="searchBtn">🔍</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+ 
+    <section class="cart-section">
+        <div class="container">
+            <h2 class="section-title">Giỏ Hàng Của Bạn</h2>
+            
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems">
+                     Cart items will be loaded by JavaScript 
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Tổng Đơn Hàng</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span id="shipping">30.000đ</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng:</span>
+                        <span id="total">0đ</span>
+                    </div>
+                    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                        Tiến hành thanh toán
+                    </button>
+                    <button class="continue-btn" onclick="window.location.href='index.html#menu'">
+                        Tiếp tục mua hàng
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Goăn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Goăn</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link ">Trang chủ</a>
+                    <a href="#menu" class="nav-link">Thực đơn</a>
+                    <a href="#promotions" class="nav-link">Khuyến mãi</a>
+                    <a href="cart.html" class="nav-link cart-link">
+                        Giỏ hàng
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <div id="userInfo" class="user-info" style="display: none;">
+                        <span class="user-greeting" id="userGreeting"></span>
+                        <button class="logout-btn" id="logoutBtn">Đăng xuất</button>
+                    </div>
+                    <a href="login.html" class="nav-link login-btn" id="loginLink">Đăng nhập</a>
+                </nav>
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn..." autocomplete="off">
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
+                    <button id="searchBtn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2 class="auth-title">Đăng Ký</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Họ và tên</label>
+                        <input type="text" id="registerName" required placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required placeholder="Nhập email của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Mật khẩu</label>
+                        <input type="password" id="registerPassword" required placeholder="Nhập mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Xác nhận mật khẩu</label>
+                        <input type="password" id="registerConfirmPassword" required placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <button type="submit" class="auth-btn">Đăng ký</button>
+                </form>
+                <p class="auth-switch">
+                    Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-icon">✓</div>
+            <h3>Đăng ký thành công!</h3>
+            <p>Chào mừng bạn đến với Goăn</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
